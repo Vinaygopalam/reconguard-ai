@@ -1,0 +1,3 @@
+def build_close_summary(results: list[dict], groups: list[dict]) -> str:
+    total = len(results); auto = sum(r["status"] == "AUTO_MATCH" for r in results); review = sum(r["status"] == "HUMAN_REVIEW" for r in results); exceptions = total - auto - review; critical = sum(r.get("priority", {}).get("category") == "CRITICAL" for r in results); exposure = sum(max(float(v["amount"]) for v in r["source_records"].values()) for r in results if r["status"] != "AUTO_MATCH")
+    return f"ReconGuard AI automatically reconciled {auto} of {total} records ({auto / total * 100:.1f}%). {review} require human verification and {exceptions} are classified as exceptions. {critical} critical cases represent estimated exposure of INR {exposure:,.0f}; investigate these before financial close."
