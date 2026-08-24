@@ -51,15 +51,29 @@ flowchart TD
 
 ## Screenshots
 
-Screenshots can be added here for the following views:
+### Dashboard
 
-- Dashboard
-- Data Workspace
-- Reconciliation Results
-- Investigation View
-- Financial Close Intelligence
+![ReconGuard AI dashboard](screenshots/dashboard.png.png)
 
-No screenshot files are currently included in the repository.
+### Data Workspace
+
+![Data Workspace](screenshots/dataworkspace.png)
+
+### Reconciliation Results
+
+![Reconciliation Results](screenshots/reconciliation.png)
+
+### Investigation View
+
+![Investigation View](screenshots/investigation.png)
+
+### Financial Close Intelligence
+
+![Financial Close Intelligence](screenshots/financial-close.png)
+
+### Methodology
+
+![Methodology](screenshots/methodology.png)
 
 ## Installation
 
@@ -127,6 +141,13 @@ ReconGuard-AI/
 ├── docs/
 │   ├── architecture.md
 │   └── methodology.md
+├── screenshots/
+│   ├── dashboard.png.png
+│   ├── dataworkspace.png
+│   ├── financial-close.png
+│   ├── investigation.png
+│   ├── methodology.png
+│   └── reconciliation.png
 ├── src/
 │   ├── analytics/
 │   ├── data/
